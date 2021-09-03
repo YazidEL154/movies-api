@@ -26,6 +26,7 @@ export class MoviePopularListAfficheComponent implements OnInit {
 
   private getAffiche(id: number): void {
     this.movieService.getAffiche(id).subscribe((detail: Details)=>{
+      console.log(this.detail);
       this.detail = detail;
     });
   }

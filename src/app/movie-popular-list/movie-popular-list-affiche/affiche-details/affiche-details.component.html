@@ -1,8 +1,8 @@
 <div class="conteneur">
 <div class="detailImage">
-    <img [src]="detail.poster_path">
+    <img src="https://image.tmdb.org/t/p/w500/{{detail.poster_path}}">
 </div>
-<div class="parag">
+<div *ngIf="detail" class="parag">
     <h4>{{detail.title}} | {{detail.release_date}}</h4>
     <h6>Vote : {{detail.vote_average}}</h6>
     <p>{{detail.overview}}</p>
